@@ -1,0 +1,8 @@
+4 AI projects that can get you hired in Formula 1.
+
+1. AI Driver Coach: imagine racing in a sim and hearing a brake later into turn 3. The model analyzes your telemetry in real time and gives instant feedback on how to improve.
+2. Race Data Dashboard: looking at speed, braking and throttle separately does not show how a car performs. Build a dashboard that analyzes speed, tire degradation and track evolution, and compares cars lap by lap.
+3. F1 Knowledge Chatbot: the model queries real-time data from a database and answers statistical questions, such as who the five fastest drivers were and their lap times. A regular chatbot cannot do that.
+4. Results Predictor: train the model on historical performance data. Analyze each driver's qualifying results and use them to predict the race outcome before it starts.
+
+You can use the FastF1 Python library to build these projects.

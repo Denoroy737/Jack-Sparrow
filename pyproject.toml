@@ -1,0 +1,35 @@
+[project]
+name = "jack-sparrow"
+version = "0.1.0"
+description = "Turns saved Instagram reels into structured Notion reports via a Telegram bot."
+requires-python = ">=3.12"
+dependencies = [
+    "aiogram>=3.13,<4",  # MIT. Telegram bot framework (Phase 2)
+    "pydantic>=2.7,<3",  # MIT. Agent output schemas (Phase 4)
+    "groq>=0.11",        # Apache-2.0. LLM client (Phase 4) and Whisper (Phase 3)
+    "yt-dlp",            # Unlicense. Audio download (Phase 3)
+    "faster-whisper>=1.0",  # MIT. Local fallback transcription (Phase 3)
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",   # MIT
+    "ruff>=0.5",     # MIT
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
